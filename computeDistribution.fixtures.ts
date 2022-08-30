@@ -33,3 +33,27 @@ export const simpleTestCase2: TestCase = {
   people: ['abdel', 'berenice', 'charles', 'damien', 'émilie', 'farouk', 'gatien', 'hector', 'ignacio', 'jérôme'],
   couples: [],
 }
+
+export const threePeopleOneCoupleTestCase: TestCase = {
+  description: '3 people - 1 couple test case',
+  people: ['abdel', 'berenice', 'charles'],
+  couples: [['abdel', 'berenice']],
+}
+
+export const fourPeopleOneCoupleTestCase: TestCase = {
+  description: '4 people - 1 couple test case',
+  people: ['abdel', 'berenice', 'charles', 'delphine'],
+  couples: [['abdel', 'berenice']],
+}
+
+export const fourPeopleTwoCouplesTestCase: TestCase = {
+  description: '4 people - 2 couples test case',
+  people: ['abdel', 'berenice', 'charles', 'delphine'],
+  couples: [['abdel', 'berenice'], ['charles', 'delphine']],
+}
+
+export const genericTestCase: TestCase = {
+  description: 'Generic test case',
+  people:  ["Florent", "Jessica", "Coline", "Emilien", "Ambroise", "Bastien"],
+  couples: [["Florent", "Jessica"], ["Coline", "Emilien"]],
+}

@@ -4,6 +4,7 @@ import computeDistribution from './computeDistribution';
 import { InvalidArgumentError } from './errors/InvalidArgumentError';
 import { MissingArgumentError } from './errors/MissingArgumentError';
 import { NoDistributionError } from './errors/NoDistributionError';
+import { logResponse } from './helpers/logResponse';
 import { validateArgs } from './helpers/validateArgs';
 
 
@@ -11,7 +12,9 @@ try{
   const args = parseArgs(process.argv);
   const { people, couples } = validateArgs(args);
 
-  computeDistribution(people, couples);
+  const distribution = computeDistribution(people, couples);
+
+  logResponse(distribution);
 } catch(error) {
   if (
     error instanceof NoDistributionError
